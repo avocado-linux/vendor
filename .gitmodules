@@ -1,0 +1,54 @@
+[submodule "bitbake"]
+	path = bitbake
+	url = git@github.com:avocado-linux/vendor-bitbake.git
+[submodule "meta-arm"]
+	path = meta-arm
+	url = git@github.com:avocado-linux/vendor-meta-arm.git
+[submodule "meta-atmel"]
+	path = meta-atmel
+	url = git@github.com:avocado-linux/vendor-meta-atmel
+[submodule "meta-erlang"]
+	path = meta-erlang
+	url = git@github.com:avocado-linux/vendor-meta-erlang.git
+[submodule "meta-freescale"]
+	path = meta-freescale
+	url = git@github.com:avocado-linux/vendor-meta-freescale.git
+[submodule "meta-freescale-3rdparty"]
+	path = meta-freescale-3rdparty
+	url = git@github.com:avocado-linux/vendor-meta-freescale-3rdparty.git
+[submodule "meta-imx"]
+	path = meta-imx
+	url = git@github.com:avocado-linux/vendor-meta-imx.git
+[submodule "meta-imx-frdm"]
+	path = meta-imx-frdm
+	url = git@github.com:avocado-linux/vendor-meta-imx-frdm.git
+[submodule "meta-openembedded"]
+	path = meta-openembedded
+	url = git@github.com:avocado-linux/vendor-meta-openembedded.git
+[submodule "meta-ptx"]
+	path = meta-ptx
+	url = git@github.com:avocado-linux/vendor-meta-ptx.git
+[submodule "meta-raspberrypi"]
+	path = meta-raspberrypi
+	url = git@github.com:avocado-linux/vendor-meta-raspberrypi.git
+[submodule "meta-rockchip"]
+	path = meta-rockchip
+	url = git@github.com:avocado-linux/vendor-meta-rockchip.git
+[submodule "meta-security"]
+	path = meta-security
+	url = git@github.com:avocado-linux/vendor-meta-security.git
+[submodule "meta-st-stm32mp"]
+	path = meta-st-stm32mp
+	url = git@github.com:avocado-linux/vendor-meta-st-stm32mp.git
+[submodule "meta-tegra"]
+	path = meta-tegra
+	url = git@github.com:avocado-linux/vendor-meta-tegra.git
+[submodule "meta-virtualization"]
+	path = meta-virtualization
+	url = git@github.com:avocado-linux/vendor-meta-virtualization.git
+[submodule "meta-webkit"]
+	path = meta-webkit
+	url = git@github.com:avocado-linux/vendor-meta-webkit.git
+[submodule "openembedded-core"]
+	path = openembedded-core
+	url = git@github.com:avocado-linux/vendor-openembedded-core.git
