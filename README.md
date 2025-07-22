@@ -14,13 +14,17 @@ To add a new dependency, use the `vendor-repo.sh` script. This script will clone
 
 ### Usage
 
-1.  Run the script with the upstream repository's URL:
+1.  Run the script with the upstream repository's URL. You can also provide an optional GitHub organization name, which defaults to `avocado-linux`.
     ```bash
-    ./vendor-repo.sh <upstream-repo-url>
+    ./vendor-repo.sh <upstream-repo-url> [github-org]
     ```
-    For example:
+    For example, to use the default organization:
     ```bash
     ./vendor-repo.sh https://github.com/upstream/project.git
+    ```
+    Or to specify a different organization:
+    ```bash
+    ./vendor-repo.sh https://github.com/upstream/project.git my-other-org
     ```
 
 2.  The script will perform the necessary steps and stage the new submodule. Review the changes to ensure everything is correct:

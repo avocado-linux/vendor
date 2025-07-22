@@ -2,14 +2,14 @@
 set -e
 
 if [ -z "$1" ]; then
-  echo "Usage: $0 <upstream-repo-url>"
+  echo "Usage: $0 <upstream-repo-url> [github-org]"
   exit 1
 fi
 
 UPSTREAM_URL="$1"
 REPO_DIR=$(basename -s .git "$UPSTREAM_URL")
-GITHUB_ORG="git@github.com:avocado-linux"
-ORIGIN_URL="${GITHUB_ORG}/vendor-${REPO_DIR}.git"
+ORG_NAME="${2:-avocado-linux}"
+ORIGIN_URL="git@github.com:${ORG_NAME}/vendor-${REPO_DIR}.git"
 
 echo "Cloning from upstream: $UPSTREAM_URL"
 git clone --origin upstream "$UPSTREAM_URL" "$REPO_DIR"
