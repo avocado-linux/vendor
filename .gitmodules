@@ -1,54 +1,72 @@
 [submodule "bitbake"]
 	path = bitbake
-	url = git@github.com:avocado-linux/vendor-bitbake.git
+	url = ssh://git@github.com/avocado-linux/vendor-bitbake.git
+	upstream = ssh://git@github.com/openembedded/bitbake.git
 [submodule "meta-arm"]
 	path = meta-arm
-	url = git@github.com:avocado-linux/vendor-meta-arm.git
+	url = ssh://git@github.com/avocado-linux/vendor-meta-arm.git
+	upstream = ssh://git@github.com/yoctoproject/meta-arm.git
 [submodule "meta-atmel"]
 	path = meta-atmel
-	url = git@github.com:avocado-linux/vendor-meta-atmel
+	url = ssh://git@github.com/avocado-linux/vendor-meta-atmel.git
+	upstream = ssh://git@github.com/linux4sam/meta-atmel.git
 [submodule "meta-erlang"]
 	path = meta-erlang
-	url = git@github.com:avocado-linux/vendor-meta-erlang.git
+	url = ssh://git@github.com/avocado-linux/vendor-meta-erlang.git
+	upstream = ssh://git@github.com/meta-erlang/meta-erlang.git
 [submodule "meta-freescale"]
 	path = meta-freescale
-	url = git@github.com:avocado-linux/vendor-meta-freescale.git
+	url = ssh://git@github.com/avocado-linux/vendor-meta-freescale.git
+	upstream = ssh://git@github.com/Freescale/meta-freescale.git
 [submodule "meta-freescale-3rdparty"]
 	path = meta-freescale-3rdparty
-	url = git@github.com:avocado-linux/vendor-meta-freescale-3rdparty.git
+	url = ssh://git@github.com/avocado-linux/vendor-meta-freescale-3rdparty.git
+	upstream = ssh://git@github.com/Freescale/meta-freescale-3rdparty.git
 [submodule "meta-imx"]
 	path = meta-imx
-	url = git@github.com:avocado-linux/vendor-meta-imx.git
+	url = ssh://git@github.com/avocado-linux/vendor-meta-imx.git
+	upstream = ssh://git@github.com/nxp-imx/meta-imx.git
 [submodule "meta-imx-frdm"]
 	path = meta-imx-frdm
-	url = git@github.com:avocado-linux/vendor-meta-imx-frdm.git
+	url = ssh://git@github.com/avocado-linux/vendor-meta-imx-frdm.git
+	upstream = ssh://git@github.com/nxp-imx/meta-imx-frdm.git
 [submodule "meta-openembedded"]
 	path = meta-openembedded
-	url = git@github.com:avocado-linux/vendor-meta-openembedded.git
+	url = ssh://git@github.com/avocado-linux/vendor-meta-openembedded.git
+	upstream = ssh://git@github.com/openembedded/meta-openembedded.git
 [submodule "meta-ptx"]
 	path = meta-ptx
-	url = git@github.com:avocado-linux/vendor-meta-ptx.git
+	url = ssh://git@github.com/avocado-linux/vendor-meta-ptx.git
+	upstream = ssh://git@github.com/pengutronix/meta-ptx.git
 [submodule "meta-raspberrypi"]
 	path = meta-raspberrypi
-	url = git@github.com:avocado-linux/vendor-meta-raspberrypi.git
+	url = ssh://git@github.com/avocado-linux/vendor-meta-raspberrypi.git
+	upstream = ssh://git@github.com/agherzan/meta-raspberrypi.git
 [submodule "meta-rockchip"]
 	path = meta-rockchip
-	url = git@github.com:avocado-linux/vendor-meta-rockchip.git
+	url = ssh://git@github.com/avocado-linux/vendor-meta-rockchip.git
+	upstream = ssh://git@github.com/JeffyCN/meta-rockchip.git
 [submodule "meta-security"]
 	path = meta-security
-	url = git@github.com:avocado-linux/vendor-meta-security.git
+	url = ssh://git@github.com/avocado-linux/vendor-meta-security.git
+	upstream = ssh://git@github.com/yoctoproject/meta-security.git
 [submodule "meta-st-stm32mp"]
 	path = meta-st-stm32mp
-	url = git@github.com:avocado-linux/vendor-meta-st-stm32mp.git
+	url = ssh://git@github.com/avocado-linux/vendor-meta-st-stm32mp.git
+	upstream = ssh://git@github.com/STMicroelectronics/meta-st-stm32mp.git
 [submodule "meta-tegra"]
 	path = meta-tegra
-	url = git@github.com:avocado-linux/vendor-meta-tegra.git
+	url = ssh://git@github.com/avocado-linux/vendor-meta-tegra.git
+	upstream = ssh://git@github.com/OE4T/meta-tegra.git
 [submodule "meta-virtualization"]
 	path = meta-virtualization
-	url = git@github.com:avocado-linux/vendor-meta-virtualization.git
+	url = ssh://git@github.com/avocado-linux/vendor-meta-virtualization.git
+	upstream = ssh://git@github.com/yoctoproject/meta-virtualization.git
 [submodule "meta-webkit"]
 	path = meta-webkit
-	url = git@github.com:avocado-linux/vendor-meta-webkit.git
+	url = ssh://git@github.com/avocado-linux/vendor-meta-webkit.git
+	upstream = ssh://git@github.com/Igalia/meta-webkit.git
 [submodule "openembedded-core"]
 	path = openembedded-core
-	url = git@github.com:avocado-linux/vendor-openembedded-core.git
+	url = ssh://git@github.com/avocado-linux/vendor-openembedded-core.git
+	upstream = ssh://git@github.com/openembedded/openembedded-core.git

@@ -39,6 +39,7 @@ echo "Adding $REPO_DIR as a submodule to the superproject..."
 
 git config -f .gitmodules submodule."$REPO_DIR".path "$REPO_DIR"
 git config -f .gitmodules submodule."$REPO_DIR".url "$ORIGIN_URL"
+git config -f .gitmodules submodule."$REPO_DIR".upstream "$UPSTREAM_URL"
 
 git add "$REPO_DIR"
 git add .gitmodules
