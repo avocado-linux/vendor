@@ -70,3 +70,7 @@
 	path = openembedded-core
 	url = ssh://git@github.com/avocado-linux/vendor-openembedded-core.git
 	upstream = ssh://git@github.com/openembedded/openembedded-core.git
+[submodule "meta-lts-mixins"]
+	path = meta-lts-mixins
+	url = ssh://git@github.com/avocado-linux/vendor-meta-lts-mixins.git
+	upstream = https://git.yoctoproject.org/meta-lts-mixins
