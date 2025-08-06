@@ -5,7 +5,7 @@
 [submodule "meta-arm"]
 	path = meta-arm
 	url = ssh://git@github.com/avocado-linux/vendor-meta-arm.git
-	upstream = ssh://git@github.com/yoctoproject/meta-arm.git
+	upstream = https://git.yoctoproject.org/meta-arm.git
 [submodule "meta-atmel"]
 	path = meta-atmel
 	url = ssh://git@github.com/avocado-linux/vendor-meta-atmel.git
@@ -29,7 +29,7 @@
 [submodule "meta-imx-frdm"]
 	path = meta-imx-frdm
 	url = ssh://git@github.com/avocado-linux/vendor-meta-imx-frdm.git
-	upstream = ssh://git@github.com/nxp-imx/meta-imx-frdm.git
+	upstream = ssh://git@github.com/nxp-imx-support/meta-imx-frdm.git
 [submodule "meta-openembedded"]
 	path = meta-openembedded
 	url = ssh://git@github.com/avocado-linux/vendor-meta-openembedded.git
@@ -49,7 +49,7 @@
 [submodule "meta-security"]
 	path = meta-security
 	url = ssh://git@github.com/avocado-linux/vendor-meta-security.git
-	upstream = ssh://git@github.com/yoctoproject/meta-security.git
+	upstream = https://git.yoctoproject.org/meta-security.git
 [submodule "meta-st-stm32mp"]
 	path = meta-st-stm32mp
 	url = ssh://git@github.com/avocado-linux/vendor-meta-st-stm32mp.git
@@ -61,7 +61,7 @@
 [submodule "meta-virtualization"]
 	path = meta-virtualization
 	url = ssh://git@github.com/avocado-linux/vendor-meta-virtualization.git
-	upstream = ssh://git@github.com/yoctoproject/meta-virtualization.git
+	upstream =  https://git.yoctoproject.org/meta-virtualization.git
 [submodule "meta-webkit"]
 	path = meta-webkit
 	url = ssh://git@github.com/avocado-linux/vendor-meta-webkit.git
@@ -73,7 +73,7 @@
 [submodule "meta-lts-mixins"]
 	path = meta-lts-mixins
 	url = ssh://git@github.com/avocado-linux/vendor-meta-lts-mixins.git
-	upstream = https://git.yoctoproject.org/meta-lts-mixins
+	upstream = https://git.yoctoproject.org/meta-lts-mixins.git
 [submodule "meta-fwup"]
 	path = meta-fwup
 	url = git@github.com:avocado-linux/vendor-meta-fwup.git
