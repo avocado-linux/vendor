@@ -52,9 +52,16 @@ update_submodule() {
   done
 
   # Push all branches to origin
-  if ! git push --all origin; then
-    echo "[ERROR] Failed to push branches for '$submodule_name'."
-    return 1
+  if [ "${FORCE_PUSH:-0}" -eq 1 ]; then
+    if ! git push --all origin --force; then
+      echo "[ERROR] Failed to push branches for '$submodule_name'."
+      return 1
+    fi
+  else
+    if ! git push --all origin; then
+      echo "[ERROR] Failed to push branches for '$submodule_name'."
+      return 1
+    fi
   fi
 
   echo "Successfully updated '$submodule_name'."
@@ -65,13 +72,33 @@ update_submodule() {
 export -f update_submodule
 
 # Parse command line arguments
+FORCE_PUSH=0
 REQUESTED_SUBMODULES=()
-if [ $# -gt 0 ]; then
-  REQUESTED_SUBMODULES=("$@")
+
+for arg in "$@"; do
+  case "$arg" in
+    --force)
+      FORCE_PUSH=1
+      ;;
+    *)
+      REQUESTED_SUBMODULES+=("$arg")
+      ;;
+  esac
+done
+
+# Display what will be updated
+if [ ${#REQUESTED_SUBMODULES[@]} -gt 0 ]; then
   echo "Updating specific submodules: ${REQUESTED_SUBMODULES[*]}"
 else
   echo "Updating all submodules..."
 fi
+
+if [ $FORCE_PUSH -eq 1 ]; then
+  echo "Force push enabled."
+fi
+
+# Export variables for subshells
+export FORCE_PUSH
 
 # Export the requested submodules as a string for subshells (arrays cannot be exported)
 export REQUESTED_SUBMODULES_STRING="${REQUESTED_SUBMODULES[*]}"
