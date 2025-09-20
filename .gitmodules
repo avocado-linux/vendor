@@ -78,3 +78,7 @@
 	path = meta-fwup
 	url = git@github.com:avocado-linux/vendor-meta-fwup.git
 	upstream = https://github.com/fwup-home/meta-fwup
+[submodule "meta-tegra-community"]
+	path = meta-tegra-community
+	url = git@github.com:avocado-linux/vendor-meta-tegra-community.git
+	upstream = git@github.com:OE4T/meta-tegra-community.git
