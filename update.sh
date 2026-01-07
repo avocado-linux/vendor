@@ -51,7 +51,7 @@ update_submodule() {
     fi
   done
 
-  # Push all branches to origin
+  # Push all upstream-tracking branches to origin
   if [ "${FORCE_PUSH:-0}" -eq 1 ]; then
     if ! git push --all origin --force; then
       echo "[ERROR] Failed to push branches for '$submodule_name'."
@@ -63,6 +63,47 @@ update_submodule() {
       return 1
     fi
   fi
+
+  # Handle -avocado patch branches: rebase them onto their upstream counterparts
+  local avocado_branches=$(git for-each-ref --format='%(refname:strip=3)' refs/remotes/origin | grep -E -- '-avocado$' || true)
+
+  for avocado_branch in $avocado_branches; do
+    # Extract the base branch name (remove -avocado suffix)
+    local base_branch="${avocado_branch%-avocado}"
+
+    # Check if the corresponding upstream branch exists
+    if ! git show-ref --verify --quiet "refs/remotes/upstream/$base_branch"; then
+      echo "[WARNING] No upstream branch '$base_branch' found for '$avocado_branch', skipping rebase."
+      continue
+    fi
+
+    echo "Rebasing patch branch '$avocado_branch' onto 'upstream/$base_branch'..."
+
+    # Checkout the avocado branch (create local if needed)
+    if git show-ref --verify --quiet "refs/heads/$avocado_branch"; then
+      git switch "$avocado_branch"
+      # Reset to origin's version first to ensure we have the latest patches
+      git reset --hard "origin/$avocado_branch"
+    else
+      git switch -c "$avocado_branch" "origin/$avocado_branch"
+    fi
+
+    # Perform the rebase
+    if ! git rebase "upstream/$base_branch"; then
+      echo "[ERROR] Rebase failed for '$avocado_branch' onto 'upstream/$base_branch'."
+      echo "[ERROR] Please resolve conflicts manually, then run 'git rebase --continue'."
+      echo "[ERROR] Or run 'git rebase --abort' to cancel the rebase."
+      return 1
+    fi
+
+    # Force push the rebased branch (rebase always requires force push)
+    if ! git push origin "$avocado_branch" --force; then
+      echo "[ERROR] Failed to push rebased branch '$avocado_branch'."
+      continue
+    fi
+
+    echo "Successfully rebased '$avocado_branch' onto 'upstream/$base_branch'."
+  done
 
   echo "Successfully updated '$submodule_name'."
   return 0
