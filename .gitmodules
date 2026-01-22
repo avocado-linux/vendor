@@ -82,3 +82,7 @@
 	path = meta-tegra-community
 	url = git@github.com:avocado-linux/vendor-meta-tegra-community.git
 	upstream = git@github.com:OE4T/meta-tegra-community.git
+[submodule "meta-openjdk-temurin"]
+	path = meta-openjdk-temurin
+	url = git@github.com:avocado-linux/vendor-meta-openjdk-temurin.git
+	upstream = https://github.com/lucimber/meta-openjdk-temurin.git
