@@ -86,3 +86,43 @@
 	path = meta-openjdk-temurin
 	url = git@github.com:avocado-linux/vendor-meta-openjdk-temurin.git
 	upstream = https://github.com/lucimber/meta-openjdk-temurin.git
+[submodule "meta-browser"]
+	path = meta-browser
+	url = git@github.com:avocado-linux/vendor-meta-browser.git
+	upstream = https://github.com/OSSystems/meta-browser
+[submodule "meta-clang"]
+	path = meta-clang
+	url = git@github.com:avocado-linux/vendor-meta-clang.git
+	upstream = https://github.com/kraj/meta-clang
+[submodule "meta-wayland"]
+	path = meta-wayland
+	url = git@github.com:avocado-linux/vendor-meta-wayland.git
+	upstream = https://codeberg.org/flk/meta-wayland
+[submodule "meta-swupdate"]
+	path = meta-swupdate
+	url = git@github.com:avocado-linux/vendor-meta-swupdate.git
+	upstream = https://github.com/sbabic/meta-swupdate
+[submodule "meta-ros"]
+	path = meta-ros
+	url = git@github.com:avocado-linux/vendor-meta-ros.git
+	upstream = https://github.com/ros/meta-ros
+[submodule "meta-intel-realsense"]
+	path = meta-intel-realsense
+	url = git@github.com:avocado-linux/vendor-meta-intel-realsense.git
+	upstream = https://github.com/IntelRealSense/meta-intel-realsense
+[submodule "meta-qt5"]
+	path = meta-qt5
+	url = git@github.com:avocado-linux/vendor-meta-qt5.git
+	upstream = https://github.com/meta-qt5/meta-qt5
+[submodule "meta-python-ai"]
+	path = meta-python-ai
+	url = git@github.com:avocado-linux/vendor-meta-python-ai.git
+	upstream = https://github.com/zboszor/meta-python-ai
+[submodule "meta-clang-revival"]
+	path = meta-clang-revival
+	url = git@github.com:avocado-linux/vendor-meta-clang-revival.git
+	upstream = https://github.com/zboszor/meta-clang-revival
+[submodule "meta-basler-tools"]
+	path = meta-basler-tools
+	url = git@github.com:avocado-linux/vendor-meta-basler-tools.git
+	upstream = https://github.com/slactjohnson/meta-basler-tools
