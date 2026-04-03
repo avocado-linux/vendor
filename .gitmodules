@@ -126,3 +126,11 @@
 	path = meta-basler-tools
 	url = git@github.com:avocado-linux/vendor-meta-basler-tools.git
 	upstream = https://github.com/slactjohnson/meta-basler-tools
+[submodule "meta-aws"]
+	path = meta-aws
+	url = git@github.com:avocado-linux/vendor-meta-aws.git
+	upstream = https://github.com/aws4embeddedlinux/meta-aws
+[submodule "meta-intel"]
+	path = meta-intel
+	url = git@github.com:avocado-linux/vendor-meta-intel.git
+	upstream = https://git.yoctoproject.org/meta-intel
